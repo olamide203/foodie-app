@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/header') %> 
+<body>
+  <nav class="navbar  navbar-expand-lg navbar-dark bg-dark menu-nav">
+    <a href="#" class="navbar-brand logo ml-5">Foodie</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content"
+      aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <ul class="navbar-nav  ml-auto">
+        <li class="nav-item ml-3">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a class="nav-link" href="/menu">Menu</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a class="nav-link" href="/login">
+            Login
+          </a>
+        <li class="nav-item ml-3">
+          <a class="nav-link " href="#">Signup</a>
+        </li>
+        <li class="nav-item ml-3 mr-5">
+          <a class="nav-link " href="#"><i class="fas fa-shopping-cart cart-logo" type="button" data-toggle="collapse" data-target="#cart" aria-controls="cart"></i><sup>0</sup></a>
+          <div class="collapse cart" id="cart">
+            <div class="card card-body">
+              Your cart is empty but it dosen't have to remain so for long add items and come back here to view your cart...
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="order">
+  </div>
+  <div class="order-form container border rounded">
+    <img src="images/brand-logo.png" alt="">
+    <form action="/order" method="POST">
+      <div class="input-group mb-3 mt-5">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="name">Name</span>
+        </div>
+        <input type="text" class="form-control shadow-none" name="name" placeholder="Foodie">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control shadow-none" name="email" placeholder="user@email.com">
+        <div class="input-group-append">
+          <span class="input-group-text">Email</span>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Phone</span>
+        </div>
+        <input type="text" class="form-control shadow-none" name="phone" placeholder="+234...">
+      </div>
+      <div class="input-group mb-3">
+        <select class="custom-select" id="meals" name="food">
+          <option selected>Choose...</option>
+          <% dishes.forEach((document)=>{%>
+             <option value="<%= document.id %>"><%= document.name %> </option>
+          <% }) %> 
+        </select>
+        <div class="input-group-append">
+          <label class="input-group-text" for="meals">Food</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control shadow-none" name="address" rows="3" placeholder="Address"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="PLACE ORDER" class="btn-block ">
+      </div>
+    </form>
+      <p>Copyright 2020 @ foodie</p>
+  </div>
+  <!-- bootstrap javascript -->
+  <script src="modules/jquery/dist/jquery.min.js"></script>
+  <script src="modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>

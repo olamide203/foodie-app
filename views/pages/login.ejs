@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/header') %> 
+<body class="login">
+  <!-- <header><h3 class="logo">Foodie</h3></header> -->
+  <div id="login-page">
+  </div>
+  <div class="login-form container rounded border">
+    <div class="brand">
+      <img src="images/brand-logo.png"  alt="">
+    </div>
+    
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <input type="text" class="form-control  shadow-none" placeholder="username" name="username">
+      </div>
+      <div class="form-group input-group">
+        <input type="text" class="form-control  shadow-none" placeholder="Email" name="email">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control  shadow-none " placeholder="password" name="password"
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Login" class="btn-block  submit-btn">
+      </div>
+    </form>
+    <p>copyright 2020 @ foodie</p>
+  </div>
+  <script src="modules/jquery/dist/jquery.min.js"></script>
+  <script src="modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

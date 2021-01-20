@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../includes/header') %> 
+<body>
+  <!-- navbar section -->
+  <nav class="navbar navigation navbar-expand-lg navbar-dark bg-dark">
+    <a href="#" class="navbar-brand logo ml-2">Foodie</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content"
+      aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <ul class="navbar-nav  ml-auto">
+        <li class="nav-item ml-3">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a class="nav-link" href="#download">Download</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a class="nav-link" href="/menu">Menu</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item ml-3">
+          <a class="nav-link" href="/login">
+            Login
+          </a>
+        <li class="nav-item ml-3">
+          <a class="nav-link " href="#">Signup</a>
+        </li>
+        <li class="nav-item ml-3 mr-5">
+          <a class="nav-link " href="#"><i class="fas fa-shopping-cart cart-logo" type="button" data-toggle="collapse" data-target="#cart" aria-controls="cart"></i><sup>0</sup></a>
+          <div class="collapse cart" id="cart">
+            <div class="card card-body">
+              Your cart is empty but it dosen't have to remain so for long add items and come back here to view your cart...
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="brand-logo">
+    <h1 class="catch-phrase">Treat yourself to something nice today.</h1>
+    <p>with Foodie, there are no limits, choose one of our Delicious cuisines to get your day going</p>
+    <div class="buttons">
+      <a href="/order">
+        <button class="btn  btn-outline-light rounded-0 btn-lg top-button"><span>ORDER NOW</span></button>
+      </a>
+      <a href="/menu">
+        <button class="btn  btn-outline-light rounded-0 btn-lg top-button" href="/menu"><span>VIEW MENU</span></button>
+      </a>
+      
+    </div>
+
+  </div>
+  <div class="intro-section" id="home">
+
+  </div>
+  <div class="about-section container" id="about">
+    <div class="row about-row border border-dark border-top-0">
+      <div class="col-lg-4 col-md-6 col-sm-12 about-col ">
+        <i class="fas fa-biking fa-5x"></i>
+        <p>Fast And Reliable Delivery System</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 about-col ">
+        <i class="fas fa-phone-alt fa-5x"></i>
+        <p>Reliable customer service</p>
+      </div>
+      <div class="col-lg-4 col-md-12 about-col ">
+        <i class="fas fa-utensils fa-2x "></i>
+        <i class="fas fa-hamburger fa-5x"></i>
+        <i class="fas fa-utensils fa-2x "></i>
+        <p>Delicious and Affordable dishes cooked in a very hygenic environment</p>
+      </div>
+    </div>
+  </div>
+  <div class="about-message">
+    <p>
+      <q>foodie is your one stop restaurant for all delicious meals you want. we offer a wide range of
+        meals including desserts.Our quality is top notch. Let us make you that special meal today
+      </q>
+      -chef Kate, CEO
+    </p>
+
+  </div>
+  <div class="download-section container" id="download">
+    <div class="row">
+      <div class="col-4">
+        <img src="images/download-image.png" alt="" class="phone">
+      </div>
+      <div class="col-8">
+        <div class="download">
+          <h3>Download our mobile app!</h3>
+          <p>Our mobile app comes with a user friendly interface which enables users to place orders esaily from anywhere click below to download.</p>
+        <button class="btn btn-lg rounded-0  btn-outline-dark"><span>Download </span><i class="fab fa-google-play"></i></button>
+        <button class="btn btn-lg rounded-0 btn-dark "><span>Download </span><i class="fab fa-apple"></i></button>
+        </div>
+      </div>
+      </div>
+    </div>
+    <%- include ('../includes/footer') %> 
+  
+</body>
+
+
+</html>

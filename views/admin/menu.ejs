@@ -1,0 +1,105 @@
+<%- include("../includes/admin-header") %>
+  <div class="staff-body">
+    
+    <div class="container">
+      <div class="staff-header">
+        <!-- <form action="/search" method="post" class=" mx-auto search">
+          <div class="form-group">
+            <input type="text" class="form-control rounded-0 shadow-none admin-search mb-0 mt-2" name="search"
+              placeholder="search">
+            <button type="submit" class=" search-btn border-0  p-0 waves-effect btn shadow-none"><i
+                class="fas fa-search  search-icon"></i></button>
+          </div>
+        </form> -->
+      </div>
+      <div class="table-responsive">
+        <table class="table staff-table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Image</th>
+              <th>Price</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% menu.forEach((food) =>{%>
+              <tr>
+                <td>
+                  <input class="" type="checkbox" value="" id="">
+                </td>
+              <td><%= food.name %> </td>
+              <td class="p-0 img-col"><img src="/uploads/images/<%= food.img %>" alt="" class="table-img"></td>
+              <td><%= food.price %> </td>
+              <td><%= food.category %> </td>
+              </tr>
+              
+            <%})%>
+            
+          </tbody>
+        </table>
+      </div>
+      
+      <button class="btn btn-dark" data-toggle="modal" data-target="#mymodal">Add Food</button>
+    <div class="modal" id="mymodal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-dark">Add Food</h3>
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="/admin/menu" class="needs-validation" enctype="multipart/form-data" method="POST">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label for="name" class="input-group-text">Name</label>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter name" id="name" name="name" required="required">
+                <div class="valid-feedback">valid</div>
+                <div class="invalid-feedback">Please fill out this field</div>
+              </div>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter Price" id="price" name="price" value="&#8358;" required="required">
+                <div class="input-group-append">
+                  <label for="name" class="input-group-text">Price</label>
+                </div>
+                <div class="valid-feedback">valid</div>
+                <div class="invalid-feedback">Please fill out this field</div>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-append">
+                  <label for="name" class="input-group-text">image</label>
+                </div>
+                <input type="file" class="form-control" placeholder="Choose image" id="image" name="image" required="required">
+                <div class="valid-feedback">valid</div>
+                <div class="invalid-feedback">Image files only</div>
+              </div>
+              <div class="input-group mb-3">
+                <select name="category" id="category" class="custom-select" required="required">
+                  <option value="" selected>Select category...</option>
+                  <option value="appetizer">Appetizers</option>
+                  <option value="breakfast">Breakfast</option>
+                  <option value="main">Main Menu</option>
+                  <option value="dessert">Dessert</option>
+                  <option value="beverage">Beverage</option>
+                </select>
+                <div class="input-group-prepend">
+                  <label for="category" class="input-group-text">Category</label>
+                </div>
+                <div class="valid-feedback">valid</div>
+                <div class="invalid-feedback">Please fill out this field</div>
+              </div>
+               <button type="submit" class="btn btn-success">submit</button>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <%- include("../includes/admin-footer") %>

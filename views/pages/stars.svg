@@ -1,0 +1,30 @@
+<svg version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" style="visibility: visible;">
+  <g>
+    <defs>
+      <clipPath id="GlassClip">
+        <path d="M380.857,346.164c-1.247,4.651-4.668,8.421-9.196,10.06c-9.332,3.377-26.2,7.817-42.301,3.5        s-28.485-16.599-34.877-24.192c-3.101-3.684-4.177-8.66-2.93-13.311l7.453-27.798c0.756-2.82,3.181-4.868,6.088-5.13        c6.755-0.61,20.546-0.608,41.785,5.087s33.181,12.591,38.725,16.498c2.387,1.682,3.461,4.668,2.705,7.488L380.857,346.164z"></path>
+      </clipPath>
+      <clipPath id="cordClip">
+        <rect width="800" height="600"></rect>
+      </clipPath>
+    </defs>
+    <g id="stars">
+      
+        <g id="big-star-one" transform="matrix(1,0.0034,-0.0034,1,0.8703,-1.7614)" style="transform-origin: 0px 0px;">
+          <line fill="none" stroke="#3F729B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="518.07" y1="245.375" x2="518.07" y2="266.581"></line>
+          <line fill="none" stroke="#3F729B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="508.129" y1="255.978" x2="528.01" y2="255.978"></line>
+        </g>
+        <g id="big-star-two" transform="matrix(0.9946,-0.1038,0.1038,0.9946,-24.2845,17.349)" style="transform-origin: 0px 0px;">
+          <line fill="none" stroke="#3F729B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="154.55" y1="231.391" x2="154.55" y2="252.598"></line>
+          <line fill="none" stroke="#3F729B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="144.609" y1="241.995" x2="164.49" y2="241.995"></line>
+        </g>
+        
+        <g id="small-star-two" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;">
+          <line fill="none" stroke="#3F729B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="489.555" y1="299.765" x2="489.555" y2="308.124"></line>
+          <line fill="none" stroke="#3F729B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="485.636" y1="303.945" x2="493.473" y2="303.945"></line>
+        </g>
+    </g> 
+  </g>
+</svg>

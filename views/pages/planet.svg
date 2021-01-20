@@ -1,0 +1,25 @@
+<svg version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" style="visibility: visible;">
+  <g>
+    <defs>
+      <clipPath id="GlassClip">
+        <path d="M380.857,346.164c-1.247,4.651-4.668,8.421-9.196,10.06c-9.332,3.377-26.2,7.817-42.301,3.5        s-28.485-16.599-34.877-24.192c-3.101-3.684-4.177-8.66-2.93-13.311l7.453-27.798c0.756-2.82,3.181-4.868,6.088-5.13        c6.755-0.61,20.546-0.608,41.785,5.087s33.181,12.591,38.725,16.498c2.387,1.682,3.461,4.668,2.705,7.488L380.857,346.164z"></path>
+      </clipPath>
+      <clipPath id="cordClip">
+        <rect width="800" height="600"></rect>
+      </clipPath>
+    </defs>
+    <g id="planet" transform="matrix(0.9995,-0.0326,0.0326,0.9995,-3.263,18.5698)" style="transform-origin: 0px 0px;">
+      <circle fill="#1c3845" stroke="#0E0620" stroke-width="3" stroke-miterlimit="10" cx="572.859" cy="108.803" r="90.788"></circle>
+      <circle id="craterBig" fill="#212121" stroke="#0e0620" stroke-width="3" stroke-miterlimit="10" cx="548.891" cy="62.319" r="13.074" transform="matrix(1,0,0,1,2.802,0)" style="transform-origin: 0px 0px;"></circle>
+      <circle id="craterSmall" fill="#212121" stroke="#0E0620" stroke-width="3" stroke-miterlimit="10" cx="591.743" cy="158.918" r="7.989" transform="matrix(1,0,0,1,-2.802,0)" style="transform-origin: 0px 0px;"></circle>
+      <path id="ring" fill="none" stroke="#0E0620" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="
+M476.562,101.461c-30.404,2.164-49.691,4.221-49.691,8.007c0,6.853,63.166,12.408,141.085,12.408s141.085-5.555,141.085-12.408
+c0-3.378-15.347-4.988-40.243-7.225"></path>
+      <path id="ringShadow" opacity="0.5" fill="none" stroke="#0E0620" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="
+M483.985,127.43c23.462,1.531,52.515,2.436,83.972,2.436c36.069,0,68.978-1.19,93.922-3.149"></path>
+    </g>
+    
+  </g>
+</svg>

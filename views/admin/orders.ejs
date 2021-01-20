@@ -1,0 +1,107 @@
+<%- include("../includes/admin-header") %>
+  <div class="staff-body pt-5 px-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 main-datatable p-0 card">
+          <div class="card_body">
+            <div class="row d-flex p-0">
+              <div class="col-sm-6 create-segment">
+                <a href="" class="btn dim-button create-new">Create New</a>
+              </div>
+              <div class="col-sm-6 add-flex">
+                <div class="form-group search-input">
+                  <input type="search" name="" id="filterbox" class="form-control" placeholder=" ">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="overflow-x">
+            <table class="table cust-datatable datatable no-footer" id="filtertable">
+              <thead class="">
+                <tr>
+                  <th style="min-width: 120px;">Name</th>
+                  <th style="min-width: 100px;">Food</th>
+                  <th style="min-width: 150px;">Address</th>
+                  <th style="min-width: 100px;">Date</th>
+                  <th style="min-width: 70px;">Time</th>
+                  <th style="min-width: 150px;">Status</th>
+                  <th style="min-width: 150px;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% let re=/^[0-9:]+/; %>
+                  <% orders.forEach((order, index)=>{%>
+                    <tr style="min-height: 100px;">
+                      <td>
+                        <%= order.name%>
+                      </td>
+                      <td>
+                        <%= order.food.name%>
+                      </td>
+                      <td>
+                        <%= order.address%>
+                      </td>
+                      <td>
+                        <%= order.date.toDateString()%>
+                      </td>
+                      <td>
+                        <%= re.exec(order.date.toTimeString())[0]%>
+                      </td>
+                      <td>
+                        <div class="dropdown">
+                          <span class=" mode mode-process <%= order.status%> ">
+                            <%= order.status%>
+                            <span type="button" class="dropdown-toggle dropdown-toggle-split p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </span>
+                            <div class="dropdown-menu dropdown-status">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                          </span>
+                        </div>
+                        
+                      </td>
+                      <td>
+                        <div class="control-btns">
+                          <div class="btn-group dropdown">
+                            <a href="" class="dropdown-icon" data-toggle="dropdown" id="edit">
+                             Edit
+                            </a>
+                            <ul class="dropdown-menu dropdown-edit">
+                              <li>
+                                <a href="" target="_blank">
+                                  Dummy Details
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank">
+                                  Dummy Details
+                                </a>
+                              </li>
+                              <li>
+                                <a href="" target="_blank">
+                                  Dummy Details
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="btn-group">
+                            <span class="action-cust">
+                              <a href=""><i class="fas fa-ellipsis-h"></i></a>
+                            </span>
+                          </div>
+                        </div>
+                      </td>
+                      <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include("../includes/admin-footer") %>
