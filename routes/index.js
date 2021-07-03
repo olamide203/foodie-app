@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/users");
 const path = require("path");
-const {Food} = require("../models/menu");
+const Food = require("../models/menu");
 const Order = require("../models/order");
+const Staff = require("../models/staff");
 
 router.get("/", (req, res) => {
   res.render("pages/index", { page: "home" });
@@ -14,9 +15,20 @@ router
   .get((req, res) => {
     res.render("pages/login", { page: "login" });
   })
-  .post((req, res) => {
+  .post(async(req, res) => {
     console.log(req.body);
-    res.render("pages/index", { page: "home" });
+    // return res.send(req.body);
+    let login = await Staff.login(req.body.username, req.body.password);
+    if (login){
+      if (login.rootAccess){
+        req.session.rootAccess = true;
+      }else{
+        req.session.staff = login;
+      }
+    }
+
+    res.redirect("/admin/menu");
+    // res.render("pages/index", { page: "home" });
   });
 
 router
@@ -32,8 +44,7 @@ router
         food_id = req.body.food
         address = req.body.address;
     try {
-      const food = await Food.getById(food_id);
-      const order = new Order(food, name, address, email, phone);
+      const order = new Order(food_id, name, address, email, phone);
       order.insert();
       res.send("Thank you, your order has been taken")
     } catch (error) {
@@ -50,7 +61,6 @@ router.get("/menu", async(req, res) => {
 router.get("/user", async (req, res) => {
   try {
     let documents = await User.getAll()
-    console.log(documents);
     res.send(documents);
   } catch (error) {
     console.log(error);
